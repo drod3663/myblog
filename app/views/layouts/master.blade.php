@@ -13,11 +13,51 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
+<style>
+.content{
+  position:relative;
+  top:20px;
+}
+.message{
+  position:relative;
+  top:60px;
+}
+</style>
+
 
 </head>
 <body>
- 
-	<main class="container">
+<nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{action('PostsController@index')}}">Being David Rodriguez</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+          @if(Auth::check())
+            <li class="active"><a href="{{action('PostsController@create')}}">Create Post</a></li>
+          @endif
+          @if(!Auth::check())
+            <li><a href="{{action('HomeController@showLogin')}}">Login</a></li>
+          @endif
+          @if(Auth::check())
+            <li><a href="{{action('HomeController@doLogout')}}">Logout</a></li>
+          @endif
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+	<div class="container">
+  <div class="message">
+  
  @if (Session::has('successMessage'))
             <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
         @endif
@@ -34,11 +74,10 @@
                     @endforeach
                 </ul>
             </div>
-        
+            </div>
+       
         @endif
     @yield('content')
-    </main>
-        
     
     @yield('footer')
 

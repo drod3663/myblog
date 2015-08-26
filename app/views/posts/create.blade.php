@@ -2,7 +2,7 @@
 @extends('layouts.master')
 
 @section('content')
-	
+<div class="content">
 
 
   	{{ Form::token() }}
@@ -22,6 +22,7 @@
 
 	</form> -->
 
-{{ $errors->first('title', '<span class="bg-primary">Please include a title and body</span>') }}
+
+</div>
 @stop
 
