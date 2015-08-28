@@ -41,7 +41,6 @@ class HomeController extends BaseController {
 		$password = Input::get('password');
 
 		if (Auth::attempt(array('email' => $email, 'password' => $password))) {
-    		// return Redirect::intended('/');
     		return Redirect::action('PostsController@index');
 		} else {
     		Session::flash('errorMessage', 'Login Failed');

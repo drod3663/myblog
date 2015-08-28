@@ -60,23 +60,13 @@ public function __construct()
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
 			$post->user_id = Auth::id();  
+			// $post->file = Input::file('image'); // PHOTO STUFF
 			$post->save();
 
 			Log::info('Post Saved.',Input::all());
 			Session::flash('successMessage', 'Created Successfully');
 			return Redirect::action('PostsController@index');
 		}
-
-		// old format
-		// if(!Input::has('title') && !Input::has('body')){
-		// 	return Redirect::back()->withInput();
-		// }
-		// $post = new Post();
-		// $post->title = Input::get('title');
-		// $post->body = Input::get('body');
-		// $post->save();
-
-		// return Redirect::action('PostsController@index');
 	}
 
 
@@ -94,6 +84,13 @@ public function __construct()
 		} else {
 			App::abort(404);
 		}	
+
+		// $file = Input::file('image');
+		// if(Input::hasFile('image')) {
+		// 	return $file;
+
+		// }  //PHOTO STUFF
+
 	}
 		// 
 

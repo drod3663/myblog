@@ -1,28 +1,27 @@
 
 @extends('layouts.master')
+@section('style')
+<style>
+.col-sm-3 {
+    padding-bottom: 100px;
+}
+</style>
+@stop
 
+<div class="col-md-8">
 @section('content')
-<div class="content">
 
+{{ Form::token() }}
+{{ Form::open(array('action' => array('PostsController@store'))) }}
+	@include('posts.create-edit-form')
+{{ Form::close() }}
 
-  	{{ Form::token() }}
-	{{ Form::open(array('action' => array('PostsController@store'))) }}
-        @include('posts.create-edit-form')
-    {{ Form::close() }}
-
-
-
-	<!-- <form action="{{{ action('PostsController@store') }}}" method="POST">
-	
-
-		<input class="form-control" type="text" name="title" value="{{{ Input::old('title') }}}" placeholder="Title" />
-		<textarea class="form-control" rows="3" name="body"  placeholder="Body">{{{ Input::old('body') }}}</textarea>
-
-		<button type="submit">Add New Post</button>
-
-	</form> -->
-
+{{Form::open(array('action'=>'PostsController@store', 'method' => 'POST', 'id' => 'create-post-form', 'files' =>true))}}
+{{Form::label('Add Picture', 'Add Picture')}}
+{{Form::file('image')}}
+{{Form::close()}}
 
 </div>
+
 @stop
 

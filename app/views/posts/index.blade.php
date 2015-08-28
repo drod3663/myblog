@@ -1,12 +1,14 @@
 @extends('layouts.master')
 
-
 @section('content')
 
+ 
+    
+   
 <div class="content">
-@if(Auth::check())
+<!-- @if(Auth::check())
 <h3><strong>{{"Welcome"}} {{{Auth::user()->first_name}}} {{{Auth::user()->last_name}}}</h3></strong>
-@endif
+@endif -->
 
 <form>
 <div class="form-group @if($errors->has('title')) has-error @endif">
@@ -21,7 +23,7 @@
 
 
 		@foreach ($posts as $post)
-			<h2><a href="{{{ action('PostsController@show', $post->id) }}}">Post Title: {{{$post->title}}}</a></h2>
+			<h2><a href="{{{ action('PostsController@show', $post->id) }}}">{{{$post->title}}}</a></h2>
    			<!-- <h3>Post Title: {{{$post->title}}}</h3> -->
    			{{{Str::words($post->body, 20)}}}
    			<p><em> {{"created by: " . $post->user->first_name }} {{$post->user->last_name}}</em></p>
@@ -46,4 +48,5 @@
 
 {{ $posts->links() }}
 </div>
+
 @stop
