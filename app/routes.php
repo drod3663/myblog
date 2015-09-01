@@ -11,13 +11,29 @@
 |
 */
 
-Route::get('/', 'HomeController@showWelcome');
+// Route::get('/', function(){
+// 	return Route::action('PostsController@index')
+// 	});
+
+// Route::get('homepage', 'HomeController@showHomepage');
+
+Route::get('/', 'HomeController@showHomepage');
 
 Route::resource('posts', 'PostsController');
 
 Route::get('/resume', 'HomeController@showResume');
 
 Route::get('/portfolio', 'HomeController@showPortfolio');
+
+Route::get('/about', 'HomeController@showAbout');
+
+Route::get('/contact', 'HomeController@showContact');
+
+Route::get('/mole', 'HomeController@showMole');
+
+Route::get('/calculator', 'HomeController@showCalculator');
+
+Route::get('/simon', 'HomeController@showSimon');
 
 
 

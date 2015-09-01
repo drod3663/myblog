@@ -13,7 +13,7 @@ public function __construct()
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index() //FIX THE SEARCH
 	{
 		// $posts = Post::paginate(4);
 		$posts = Post::with('user')->paginate(4);

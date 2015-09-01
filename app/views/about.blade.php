@@ -1,9 +1,12 @@
+
 	@extends('layouts.otherpages')
     @section('title')
-    <title>Portfolio</title>
+    <title>About</title>
     @stop
 
 
-    @section('content')
+    
+
+	@section('content')
 	
     

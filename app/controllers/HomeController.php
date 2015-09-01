@@ -15,6 +15,11 @@ class HomeController extends BaseController {
 	|
 	*/
 
+	public function showHomepage()
+	{
+		return View::make('homepage');
+	}
+
 	public function showWelcome()
 	{
 		return View::make('hello');
@@ -28,6 +33,31 @@ class HomeController extends BaseController {
 	public function showPortfolio()
 	{
 		return View::make('portfolio');
+	}
+
+	public function showAbout()
+	{
+		return View::make('about');
+	}
+
+	public function showContact()
+	{
+		return View::make('contact');
+	}
+
+	public function showMole()
+	{
+		return View::make('mole');
+	}
+
+	public function showCalculator()
+	{
+		return View::make('calculator');
+	}
+
+	public function showSimon()
+	{
+		return View::make('simon');
 	}
 
 	public function showLogin()

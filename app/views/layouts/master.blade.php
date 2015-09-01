@@ -67,7 +67,7 @@ body {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{action('PostsController@index')}}">Being David Rodriguez</a>
+          <a class="navbar-brand" href="{{action('PostsController@index')}}">Silent Earth</a>
         </div>
     <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -114,9 +114,7 @@ body {
     </div>
 @endif
  
- <div class="col-md-8">
-    @yield('content')
-</div>
+
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
@@ -149,7 +147,11 @@ body {
             </ol>
           </div>
         </div><!-- /.blog-sidebar -->
-   
+
+
+ <div class="col-md-8">
+    @yield('content')
+</div>   
     @yield('footer')
 
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
