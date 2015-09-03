@@ -21,7 +21,31 @@ body {
         position: relative;
         top: 50px;
     }
+.row {
+     position: relative;
+        top: 50px;
+    }
+#simon {
+    position: relative;
+    left: 125%;
+    top:400px;
+    } 
+#calculator {
+    position: relative;
+    left: 60%;
+    top: 400px;
+}
+#mole {
+    position: relative;
+    top: 400px;
+}
+.about {
+    position: relative;
+    top: 100px;
+}
+
   </style>
+
 
 
 
@@ -36,11 +60,11 @@ body {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">David Rodriguez</a>
+          <a class="navbar-brand" href="{{action('HomeController@showHomepage')}}">David Rodriguez</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="{{action('HomeController@showHomepage')}}">Home</a></li>
+            <!-- <li class="active"><a href="{{action('HomeController@showHomepage')}}">Home</a></li> -->
             <li><a href="{{action('HomeController@showAbout')}}">About</a></li>
             <li><a href="{{action('HomeController@showContact')}}">Contact</a></li>
           </ul>
@@ -49,10 +73,11 @@ body {
     </nav><!-- /.navbar -->
 
 
-  
+    <div class="container">
     @yield('content')
+    </div>
 
-  <div class="container">
+   <div class="container">
     <div class="message">
   
  @if (Session::has('successMessage'))

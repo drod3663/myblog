@@ -47,7 +47,7 @@ class HomeController extends BaseController {
 
 	public function showMole()
 	{
-		return View::make('mole');
+		return View::make('whackamole');
 	}
 
 	public function showCalculator()
@@ -57,7 +57,7 @@ class HomeController extends BaseController {
 
 	public function showSimon()
 	{
-		return View::make('simon');
+		return View::make('simplesimon');
 	}
 
 	public function showLogin()

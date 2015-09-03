@@ -67,6 +67,7 @@ body {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <a class="navbar-brand" href="{{action('HomeController@showHomepage')}}">David Rodriguez</a>
           <a class="navbar-brand" href="{{action('PostsController@index')}}">Silent Earth</a>
         </div>
     <div id="navbar" class="collapse navbar-collapse">
@@ -92,7 +93,7 @@ body {
     </nav>
 
     
-	<div class="container">
+    <div class="container">
     <div class="message">
   
  @if (Session::has('successMessage'))

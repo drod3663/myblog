@@ -14,11 +14,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
 <style type="text/css">
-.jumbotron {
-  position: relative;
-  top: 30px;
-}
-  </style>
+
+</style>
+
 
 
 </head>
@@ -45,10 +43,11 @@
     </nav><!-- /.navbar -->
 
 
-  
+    <div class="container">
     @yield('content')
+    </div>
 
-  <div class="container">
+   <div class="container">
     <div class="message">
   
  @if (Session::has('successMessage'))

@@ -18,7 +18,7 @@
 // Route::get('homepage', 'HomeController@showHomepage');
 
 Route::get('/', 'HomeController@showHomepage');
-
+ 
 Route::resource('posts', 'PostsController');
 
 Route::get('/resume', 'HomeController@showResume');
@@ -29,11 +29,11 @@ Route::get('/about', 'HomeController@showAbout');
 
 Route::get('/contact', 'HomeController@showContact');
 
-Route::get('/mole', 'HomeController@showMole');
+Route::get('/whackamole', 'HomeController@showMole');
 
 Route::get('/calculator', 'HomeController@showCalculator');
 
-Route::get('/simon', 'HomeController@showSimon');
+Route::get('/simplesimon', 'HomeController@showSimon');
 
 
 
