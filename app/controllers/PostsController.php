@@ -140,13 +140,43 @@ public function __construct()
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy($id) 
 	{
 		Post::find($id)->delete();
 		
 		Session::flash('successMessage', 'Deleted Successfully');
 		return Redirect::action('PostsController@index');
-		
+
+		if (Request::wantsJson()) {
+            return Response::json(array(/* ... */)); //NEED TO ADD SOMETHING HERE TO MAKE WORK
+        } else {
+            return Redirect::action('PostsController@index');
+        }
+	}
+
+	// public function destroy($id)
+ //    {
+ //        // ...
+        
+ //        // Modify destroy() to send back JSON if it's been requested
+ //        if (Request::wantsJson()) {
+ //            return Response::json(array(/* ... */));
+ //        } else {
+ //            return Redirect::action('PostsController@index');
+ //        }
+ //    }
+
+	public function getManage()
+	{
+		return View::make('posts.manage');
+	}
+
+	public function getList()
+	{
+		$posts = Post::with('user')->get();
+		// $posts = Post::all();
+		return Response::json($posts);
+
 	}
 
 

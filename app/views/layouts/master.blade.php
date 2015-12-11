@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="csrf-token" content="{{{ csrf_token() }}}">
     <title>@yield('title')</title>
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -23,9 +24,10 @@ body {
 }
 .welcome{
     position:relative;
-    bottom:10px;
+    left: 400px;
     color: white;
-    left: 70px;
+    bottom:45px;
+    
 }
 .row {
     position: relative;
@@ -39,6 +41,7 @@ body {
 .clearfix {
     overflow: auto;
 }
+
 
 /*.content{ 
     position:relative;
@@ -56,7 +59,7 @@ body {
 
 
 </head>
-<body>
+<body ng-app="blog">
 
 <nav class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
@@ -71,26 +74,28 @@ body {
           <a class="navbar-brand" href="{{action('PostsController@index')}}">Silent Earth</a>
         </div>
     <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-          @if(Auth::check())
-            <li class="active"><a href="{{action('PostsController@create')}}">Create Post</a></li>
-          @endif
-          @if(!Auth::check())
-            <li><a href="{{action('HomeController@showLogin')}}">Login</a></li>
-          @endif
-          @if(Auth::check())
-            <li><a href="{{action('HomeController@doLogout')}}">Logout</a></li>
-          @endif
-            <li><a href="#contact"></a></li>
-            <li>
+        <ul class="nav navbar-nav">
             @if(Auth::check())
-                <h3><strong><div class="welcome">{{"Welcome"}} {{{Auth::user()->first_name}}} {{{Auth::user()->last_name}}}</h3></strong></div>
+                <li class="active"><a href="{{action('PostsController@create')}}">Create Post</a></li>
             @endif
-
-            </ul>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </nav>
+            @if(!Auth::check())
+                <li><a href="{{action('HomeController@showLogin')}}">Login</a></li>
+            @endif
+            @if(Auth::check())
+                <li><a href="{{action('PostsController@getManage')}}">Manage Posts</a></li>
+            @endif
+            @if(Auth::check())
+                <li><a href="{{action('HomeController@doLogout')}}">Logout</a></li>
+            @endif
+           <!--  @if(Auth::check())
+                <h3><strong><div class="welcome">{{"Welcome"}} {{{Auth::user()->first_name}}} </h3></strong></div>
+            @endif -->
+        </ul>
+            
+        
+    </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+</nav>
 
     
     <div class="container">
@@ -154,6 +159,8 @@ body {
     @yield('content')
 </div>   
     @yield('footer')
+
+    
 
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->

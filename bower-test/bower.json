@@ -1,0 +1,20 @@
+{
+  "name": "blog",
+  "version": "0.1.0",
+  "homepage": "https://github.com/drod3663/myblog",
+  "authors": [
+    "David <d_rod3663@hotmail.com>"
+  ],
+  "description": "blog",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.5"
+  }
+}

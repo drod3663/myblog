@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="csrf-token" content="{{{ csrf_token() }}}">
     <title>@yield('title')</title>
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -50,7 +51,7 @@ body {
 
 
 </head>
-<body>
+<body ng-app="blog">
 <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">
@@ -104,6 +105,9 @@ body {
         
    
     @yield('footer')
+
+<script type="text/javascript" src="/js/angular.min.js"></script>
+<script type="text/javascript" src="../js/blog.js"></script>
 
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->

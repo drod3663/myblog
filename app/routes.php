@@ -18,6 +18,10 @@
 // Route::get('homepage', 'HomeController@showHomepage');
 
 Route::get('/', 'HomeController@showHomepage');
+
+Route::get('/posts/manage', 'PostsController@getManage');
+
+Route::get('/posts/list', 'PostsController@getList');
  
 Route::resource('posts', 'PostsController');
 
