@@ -6,7 +6,7 @@
     <div class="jumbotron">
       <div class="container">
         <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p>This is a personal website I created during my time at Codeup. Included are my resume, a portfolio containing projects I worked on inside and outside of class, and a personal blog. Feel free to learn a little about me.</p>
         <p><a class="btn btn-primary btn-lg" href="{{action('HomeController@showHomepage')}}" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
@@ -16,17 +16,17 @@
       <div class="row">
         <div class="col-md-4">
           <h2>Resume</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p>Here you will find my resume if you interested in hiring me. </p>
           <p><a class="btn btn-default" href="{{action('HomeController@showResume')}}" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>Portfolio</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p>Here you can find links to things I worked on inside and outside of class. </p>
           <p><a class="btn btn-default" href="{{action('HomeController@showPortfolio')}}" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
           <h2>Blog</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p>Created during my time at Codeup, feel free to check out some of my posts as well as what I created. </p>
           <p><a class="btn btn-default" href="{{action('PostsController@index')}}" role="button">View details &raquo;</a></p>
         </div>
       </div>
