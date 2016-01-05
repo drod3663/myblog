@@ -36,7 +36,7 @@
 
 @section('footer')
       
-        <p>&copy; Company 2015</p>
+        <p>&copy; Tremendousupside.com 2016</p>
 @stop      
 
     </div> <!-- /container -->
