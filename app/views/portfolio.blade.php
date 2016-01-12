@@ -15,6 +15,7 @@
 	<div class ="row">
 	<div class="col-md-6">
 		<a id="mole" class="btn btn-primary btn-md" href="{{action('HomeController@showMole')}}" role="button">Whack-A-Lebron &raquo;</a>
+		<img src=""
 		<a id="calculator" class="btn btn-primary btn-md" href="{{action('HomeController@showCalculator')}}" role="button">Calculator &raquo;</a>
    		<a id="simon" class="btn btn-primary btn-md" href="{{action('HomeController@showSimon')}}" role="button">Simple Simon &raquo;</a>
 	</div>

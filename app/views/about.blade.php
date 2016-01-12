@@ -1,7 +1,7 @@
 
 	@extends('layouts.otherpages')
     @section('title')
-    <title>About</title>
+    About
     @stop
 
 
@@ -9,15 +9,24 @@
 
 	@section('content')
 	<div class="about">
-	<p><Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. />
+	
+		<h1>I'm a man of few words....any questions?</h1>
+	
+	<p>
+		<h3>
+			Pretty much sums me up. I have a wide range of interests from movies, music, sports, learning, tv shows, books, food and 
+			traveling. I could go on and on and in depth about my interests but I dont want to bore you. Like I said I'm a man of few
+			words and if you have any questions please feel free to ask.
+		</h3>
 	</p>
+	<i class="fa fa-envelope fa-5" width="50px"></i>
 
+	
 	</div>
+	@stop
+
+	@section('script')
+	
 	@stop
 
 	

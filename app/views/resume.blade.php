@@ -18,12 +18,14 @@
 
     <dl>
     <h1><dt>Education</h1></dt>
-    <dd>...</dd>
+    <dd>Madison High School</dd>
+    <dd>Texas A&M University</dd>
+    <dd>Codeup</dd>
     </dl>
 
     <dl>
     <h1><dt>Work Experience </h1></dt>
-    <dd>...</dd>
+    <dd>Chick-Fil-A</dd>
     <dd>...</dd>
     </dl>
 

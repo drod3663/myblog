@@ -56,11 +56,17 @@ public function __construct()
 			return Redirect::back()->withInput()->withErrors($validator);
 			
 		} else {
+
+			$uploads_directory = 'img/uploads/';
 			$post = new Post();
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
 			$post->user_id = Auth::id();  
 			// $post->file = Input::file('image'); // PHOTO STUFF
+			if(Input::hasFile('image')) {
+				$filename = Input::file('image')->getClientOriginalName();	
+				$post->image = Input::file('image')->move($uploads_directory, $filename);
+			}
 			$post->save();
 
 			Log::info('Post Saved.',Input::all());
