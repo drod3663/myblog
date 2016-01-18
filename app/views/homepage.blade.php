@@ -5,7 +5,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Hello, world!</h1>
+        <h1>Welcome!</h1>
         <p>This is a personal website I created during my time at Codeup. Included are my resume, a portfolio containing projects I worked on inside and outside of class, and a personal blog. Feel free to learn a little about me.</p>
         <p><a class="btn btn-primary btn-lg" href="{{action('HomeController@showHomepage')}}" role="button">Learn more &raquo;</a></p>
       </div>
@@ -36,7 +36,7 @@
 
 @section('footer')
       
-        <p>&copy; Tremendousupside.com 2016</p>
+        <p>&copy; tremendousupside.com 2015</p>
 @stop      
 
     </div> <!-- /container -->
