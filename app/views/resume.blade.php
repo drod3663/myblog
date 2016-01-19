@@ -10,7 +10,7 @@
 
 @section('content')
     <div class ="section">
-    <blockquote id="quote">
+    <!-- <blockquote id="quote">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
@@ -39,6 +39,7 @@
     <h1><dt>Interests</h1></dt>
     <dd>...</dd>
     <dd>...</dd>
-    </dl>
+    </dl> -->
+    <h1>Currently being updated. For more information please contact me.
     </div>
 @stop
