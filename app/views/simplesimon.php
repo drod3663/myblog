@@ -1,11 +1,7 @@
-@extends('layouts.simon')
-
-    @section('title')
-    Simple Simon
-    @stop
-    
-    @section('style')
-    
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple Simon</title>
     <link rel="stylesheet" href="/css/simon.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -14,11 +10,9 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-	@stop
+	</head>
 
-    
-
-	@section('content')
+<body>
 	<div id='center'>
 	<div class='content black' id='backColor'>
 		
@@ -26,15 +20,12 @@
 		<div class='box' id='red'></div>
 		<div class='box' id='blue'></div>
 		<div class='box' id='yellow'></div>
-	<button class='start btn btn-lrg btn-primary btn-block'  id='start'>let's play!</button>
-	<button class='btn-block' id='round'>round</button>
+	<button class='start btn btn-lrg btn-primary btn-block'  id='start'>Let's Play!</button>
+	<button class='btn-block' id='round'>Round</button>
 	</div>
 	</div>
-	@stop
-
 	
-	@section('script')
-	<script>
+<script>
 	
 	'use strict';
 	$(document).ready(function(){
@@ -132,4 +123,5 @@
 	$('#start').click(simonSequence);
 	});
 	</script>
-@stop
+</body>
+</html>

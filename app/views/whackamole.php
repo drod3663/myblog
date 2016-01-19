@@ -1,10 +1,10 @@
 
-	@extends('layouts.mole')
-    @section('title')
-    Shoot Till You Miss
-    @stop
 
-    @section('style')
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shoot Till You Miss</title>
 	<link rel="stylesheet" href="/css/mole.css">
 	<!-- <link rel="stylesheet" href="/whack-a-mole.js"> -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -14,17 +14,19 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-	@stop
+	
+</head>
+<body>
 
     
 
-	@section('content')
+	
 	<!-- <button id='score'>Score: 0</button> -->
 	<!-- <input type='text' id='score' readonly=""> <br> -->
 	<div class='container'>
 		<div class='content' id='wrapper'>
 		<h1>Shoot Til You Miss!</h1>
-		<button class='start btn btn-lrg btn-primary btn-block'  id='start'>START!</button><br>
+		<button class='start btn btn-lrg btn-primary btn-block'  id='start'>Game On!</button><br>
 		<input type='text' id='score' readonly=""> <br><br>
 		<!-- <input type='text' id='high score' readonly=''><br> -->
 			<div class='mole second' id='0'></div>
@@ -38,9 +40,7 @@
 			<div class='mole second' id='8'></div>
 		</div>
 	</div>
-	@stop
-
-	@section('script')
+	
 	<script>
 	'use strict';
 	$(document).ready(function(){
@@ -111,4 +111,5 @@
 $('#start').click(popupBox);
 	});
 </script>
-	@stop
+</body>
+</html>

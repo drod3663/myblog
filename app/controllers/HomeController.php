@@ -60,6 +60,11 @@ class HomeController extends BaseController {
 		return View::make('simplesimon');
 	}
 
+	public function showAnimate()
+	{
+		return View::make('animate');
+	}
+
 	public function showLogin()
 	{
 		return View::make('login');

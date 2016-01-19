@@ -39,6 +39,8 @@ Route::get('/calculator', 'HomeController@showCalculator');
 
 Route::get('/simplesimon', 'HomeController@showSimon');
 
+Route::get('/animate', 'HomeController@showAnimate');
+
 
 
 Route::get('login', 'HomeController@showLogin');
