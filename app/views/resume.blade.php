@@ -1,7 +1,7 @@
 @extends('layouts.otherpages')
 
 @section('title')
-    <title>Resume</title>
+Resume
 @stop
 
 

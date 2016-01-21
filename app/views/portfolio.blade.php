@@ -1,6 +1,6 @@
 @extends('layouts.otherpages')
 @section('title')
-<title>Portfolio</title>
+Portfolio
 @stop
 
 
