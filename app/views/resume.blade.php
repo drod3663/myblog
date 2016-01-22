@@ -7,7 +7,6 @@ Resume
 
 
 
-
 @section('content')
     <div class ="section">
     
@@ -19,18 +18,18 @@ Resume
     <br>
     <h4 style="text-align: center">Why Me?</h4>
     <h4>
-    <p>• Leadership skills. Over 5 years managing a variety of adults in a fast paced environment.</p>
-    <p>• Dedicated. Eager and ready to help my team in any capacity to get the job done.</p>
-    <p>• Motivated. Committed to bring my knowledge of programming and service to an
+    <p>• <span style="color:grey">Leadership skills.</span> Over 5 years managing a variety of adults in a fast paced environment.</p>
+    <p>• <span style="color:grey">Dedicated.</span> Eager and ready to help my team in any capacity to get the job done.</p>
+    <p>• <span style="color:grey">Motivated.</span> Committed to bring my knowledge of programming and service to an
     exceptional company</p>
     </h4>
     <hr style="height:2px;border-width:0;color:gray;background-color:gray">
     <br>
 
-    <h4><b>Skills</b></h4>
+    <h3><b>Skills</b></h3>
     <h4>HTML5, CSS3, Javascript, Jquery, AngularJS, Git & Github, MySql, PHP, Laravel Framework</h4>
     <br>
-    <h4><b>Full Stack Projects</b></h4>
+    <h3><b>Full Stack Projects</b></h3>
     <h4><em>borqgaming.com </em></h4>
     <h4>Text adventure game modeled after the 80s classic, Zork.</h4>
     <h4>https://github.com/Borq-Gaming/borq.dev</h4>
@@ -40,7 +39,7 @@ Resume
     <h4>Personal blog built using Laravel. </h4>
     <br>
 
-    <h4><b>Education</b></h4>
+    <h3><b>Education</b></h3>
     <h4>Codeup - <em>San Antonio, TX</em></h4>
     <h4>June 2015-October 2015</h4>
     <h4>A 4-month long full-stack web development boot camp focused on the LEMP-JS Stack. Practiced agile development, pair-programming 
@@ -50,7 +49,7 @@ Resume
     <h4>Studied business and economics</h4>
     <br>
 
-    <h4><b>Experience</b></h4>
+    <h3><b>Experience</b></h3>
     <h4>Assistant Manager<h4>
     <h4><em>Chick-fil-A - San Antonio, TX</em></h4>
     <h4>January 2006 - June 2015</h4>

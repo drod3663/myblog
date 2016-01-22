@@ -7,6 +7,7 @@
 	<p>{{{$post->body}}}</p>
 	<p><em> {{"created by: " . $post->user->first_name }} {{$post->user->last_name}}</em></p>
 	<h5> {{ $post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i:s A'); }} </h5>
+	<img src="{{ $post->image }}" alt="">
 		
 	@if(Auth::check())
 		<div class="row">

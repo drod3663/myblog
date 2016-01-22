@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+@yield('style')
 <head>
 
     <meta charset="utf-8">
