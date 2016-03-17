@@ -1,44 +1,131 @@
-@extends('layouts.home')
+@extends('layouts.master')
+
+@section('title')
+  David Rodriguez 
+@stop
+
+@section('style')
+@stop
 
 @section('content')
-    
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+<!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
-        <h1>Welcome!</h1>
-        <p>This is a personal website I created during my time at Codeup. Included are my resume, a portfolio containing projects I worked on inside and outside of class, and a personal blog. Feel free to learn a little about me.</p>
-        <p><a class="btn btn-primary btn-lg" href="{{action('HomeController@showHomepage')}}" role="button">Learn more &raquo;</a></p>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{action('HomeController@showHomepage')}}">TREMENDOUS UPSIDE</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+            <li><a href="{{action('HomeController@showAbout')}}">About</a></li>
+            <!-- <li><a href="{{action('HomeController@showPortfolio')}}">Works</a></li> -->
+            <li><a href="{{action('PostsController@index')}}">Blog</a></li>
+            <li><a href="{{action('HomeController@showResume')}}">Resume</a></li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </div>
-
-    <div class="container">
-      <!-- Example row of columns -->
+  <div id="headerwrap">
+      <div class="container">
       <div class="row">
-        <div class="col-md-4">
-          <h2>Resume</h2>
-          <p>Here you will find my resume if you interested in hiring me. </p>
-          <p><a class="btn btn-default" href="{{action('HomeController@showResume')}}" role="button">View details &raquo;</a></p>
+        <div class="col-lg-6 col-lg-offset-3">
+          <h4>WELCOME, MY NAME IS</h4>
+          <h1>DAVID RODRIGUEZ</h1>
+          <h4>FULL STACK WEB DEVELOPER</h4>
         </div>
+      </div><! --/row -->
+      </div> <!-- /container -->
+  </div><! --/headerwrap -->
+  
+  <section id="works"></section>
+  <div class="container">
+    <div class="row centered mt mb">
+      <h1>My Portfolio</h1>
+      
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+        <a href="{{action('HomeController@showMole')}}"><img src="/img/shoot.png" class="img-responsive"></a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+        <a href="{{action('HomeController@showSimon')}}"><img src="/img/simon.png" class="img-responsive"></a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+        <a href="https://github.com/Borq-Gaming/borq.dev"><img src="/img/borq.png" class="img-responsive"></a>
+      </div>
+      <!-- <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+        <a href="work.html"><img src="/img/portfolio/folio04.png" class="img-responsive"></a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+        <a href="work.html"><img src="/img/portfolio/folio05.png" class="img-responsive"></a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+        <a href="work.html"><img src="/img/portfolio/folio06.png" class="img-responsive"></a>
+      </div> -->
+    </div><! --/row -->
+  </div><! --/container -->
+
+
+  
+  <div id="social">
+    <div class="container">
+      <div class="row centered">
+      <h1>Latest Posts</h1>
+        <!-- <div class="col-lg-2">
+          <a href="#"><i class="fa fa-dribbble"></i></a>
+        </div> -->
+        <!-- <div class="col-lg-2">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+        </div> -->
+        <!-- <div class="col-lg-2">
+          <a href="#"><i class="fa fa-instagram"></i></a>
+        </div> -->
+        <!-- <div class="col-lg-4">
+          <a href=""><i class="fa fa-twitter"></i></a>
+        </div>
+        <div class="col-lg-4">
+          <a href="https://www.linkedin.com/in/david-rodriguez-616137105"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <div class="col-lg-4">
+          <a href="https://github.com/drod3663"><i class="fa fa-github"></i></a>
+        </div> -->
+
+      
+      </div><! --/row -->
+    </div><! --/container -->
+  </div><! --/social --> 
+
+  <div id="footerwrap"> 
+    <div class="container">
+      <div class="row centered">
         <div class="col-md-4">
-          <h2>Portfolio</h2>
-          <p>Here you can find links to things I worked on inside and outside of class. </p>
-          <p><a class="btn btn-default" href="{{action('HomeController@showPortfolio')}}" role="button">View details &raquo;</a></p>
-       </div>
+          <p><b>Located in Sunny San Antonio</b></p>
+        </div>
+        <div class="col-md-1">
+          <a href=""><i class="fa fa-twitter fa-2x"></i></a>
+        </div>
+        <div class="col-md-1">
+          <a href="https://www.linkedin.com/in/david-rodriguez-616137105"><i class="fa fa-linkedin fa-2x"></i></a>
+        </div>
+        <div class="col-md-1">
+          <a href="https://github.com/drod3663"><i class="fa fa-github fa-2x"></i></a>
+        </div>
+      
         <div class="col-md-4">
-          <h2>Blog</h2>
-          <p>Created during my time at Codeup, feel free to check out some of my posts as well as what I created. </p>
-          <p><a class="btn btn-default" href="{{action('PostsController@index')}}" role="button">View details &raquo;</a></p>
+          <p>drod63@gmail.com</p>
         </div>
       </div>
+    </div>
+  </div><! --/footerwrap -->
+@stop
 
-      <hr>
+@section('script')
 @stop
 
 @section('footer')
-      
-        <p>&copy; tremendousupside.com 2015</p>
-@stop      
-
-    </div> <!-- /container -->
-
-    
+@stop

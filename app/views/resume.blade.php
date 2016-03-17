@@ -1,4 +1,4 @@
-@extends('layouts.otherpages')
+@extends('layouts.master')
 
 @section('title')
 Resume
@@ -8,7 +8,31 @@ Resume
 
 
 @section('content')
-    <div class ="section">
+    <div class ="container">
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{action('HomeController@showHomepage')}}">TREMENDOUS UPSIDE</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+            <li><a href="{{action('HomeController@showAbout')}}">About</a></li>
+            <!-- <li><a href="{{action('HomeController@showPortfolio')}}">Works</a></li> -->
+            <li><a href="{{action('PostsController@index')}}">Blog</a></li>
+            <li><a href="{{action('HomeController@showResume')}}">Resume</a></li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
     
     
     <h3 style="text-align: center">David Rodriguez</h3>
