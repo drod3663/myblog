@@ -38,7 +38,7 @@
         <div class="col-lg-6 col-lg-offset-3">
           <h4>WELCOME, MY NAME IS</h4>
           <h1>DAVID RODRIGUEZ</h1>
-          <h4>FULL STACK WEB DEVELOPER</h4>
+          <h4>WEB DEVELOPER</h4>
         </div>
       </div><! --/row -->
       </div> <!-- /container -->
@@ -94,6 +94,7 @@
         <div class="col-lg-4">
           <a href="https://github.com/drod3663"><i class="fa fa-github"></i></a>
         </div> -->
+        
 
       
       </div><! --/row -->

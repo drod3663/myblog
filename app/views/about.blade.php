@@ -4,6 +4,13 @@
     About
     @stop
 
+    @section('style')
+    <style>
+    	body {
+    		background-color: #f2f2f2;
+		}
+	</style>
+	@stop
 
     
     <div class="content">
