@@ -1,0 +1,150 @@
+body {
+	background-image: url('/images/areas/castle-outer.png');
+}
+
+.label {
+	color: white;
+	font-size: 1.2em;
+}
+
+#RealTextbox {
+	position: relative;
+	left: -5000px;
+}
+
+#console_outer {
+
+	height: 340px;
+	max-width: 640px;
+	padding: 20px;
+	background-image: url("/images/light-stone-background.jpeg"); 
+	background-repeat: repeat;
+	border: outset 3px;
+	border-radius: 4px;
+}
+
+#text_wrapper {
+	height: 300px;
+	max-width: 600px;
+	background-color: #000;
+	border: inset 3px;
+	border-radius: 4px;
+}
+
+#textBox {
+	height: 250px;
+	font-family: monaco sans-serif;
+	color: white;
+	min-width: 300px;
+	max-width: 500px;
+	margin: 25px auto;
+	background-color: #000;
+	overflow: auto;
+	position: relative;
+}
+
+#location {
+	margin-bottom: 10px;
+
+
+}
+	
+#item_label {
+	margin-top: 10px;
+	padding-top: 5px;
+}
+
+#items {
+	background-color: white;
+	padding-top: 3px;
+	height: 35px;
+	margin: 0px 1px 0px 3px;
+	border: ridge;
+	max-width: 640px;
+}
+
+#current_location {
+	border: ridge;
+	width: 90%;
+	max-width: 281px;
+}
+
+/*health bar*/
+.ui-widget-header {
+	background: #FF0000;
+	border: ridge;
+	color: #333333;
+	font-weight: bold;
+	max-width: 281px;
+}
+
+/*health bar*/
+.ui-progressbar {
+	height: 2em;
+	background: #808080;
+	max-width: 281px;
+	text-align: left;
+	overflow: hidden;
+	border: ridge;
+
+}
+
+
+#instructions {
+	float: right;
+}
+
+#borq_image {
+	float: left;
+}
+
+
+#start_container {
+
+	width: 300px;
+	margin: 150px auto 15px auto;
+}
+
+.footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+}
+
+.footer > .container > a > img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (max-width: 643px) { 
+
+	#instructions, #borq_image {
+		margin: 5px auto;
+		width: 300px;
+		float: none;
+	}
+
+	#borq_image {
+		width: 209px;
+	}
+
+	#start_container {
+		width: 300px;
+		margin: 25px auto;
+	}
+}
+
+@media (max-height: 500px) { 
+
+	.footer {
+		width: 100%;
+		position: relative;
+	}
+
+	.footer > .container > a > img {
+		display: block;
+		margin: 0px auto;
+	}
+}
+

@@ -10,12 +10,13 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
 	</head>
 
 <body>
+	
 	<div id='center'>
 	<div class='content black' id='backColor'>
-		
 		<div class='box' id='green'></div>
 		<div class='box' id='red'></div>
 		<div class='box' id='blue'></div>
@@ -24,6 +25,11 @@
 	<button class='btn-block' id='round'>Round</button>
 	</div>
 	</div>
+
+
+  </div>
+</div>
+
 	
 <script>
 	

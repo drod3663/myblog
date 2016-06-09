@@ -41,6 +41,11 @@ Route::get('/simplesimon', 'HomeController@showSimon');
 
 Route::get('/animate', 'HomeController@showAnimate');
 
+Route::get('/borq', 'HomeController@showBorq');
+
+
+
+
 
 
 Route::get('login', 'HomeController@showLogin');

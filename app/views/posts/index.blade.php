@@ -1,7 +1,22 @@
 @extends('layouts.master')
 
+@section('title')
+  Posts
+@stop
  
 @section('content')
+  <div id="blog-headerwrap">
+      <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+          <!-- <h4>WELCOME, MY NAME IS</h4>
+          <h1>DAVID RODRIGUEZ</h1>
+          <h4>WEB DEVELOPER</h4> -->
+        </div>
+      </div><! --/row -->
+      </div> <!-- /container -->
+  </div><! --/headerwrap -->
+
 <div class="content">
 <nav class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
@@ -61,7 +76,7 @@
     </div>
     </div>
 @endif
- 
+   
 
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">

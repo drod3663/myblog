@@ -16,33 +16,71 @@
         $httpProvider.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
     }]);
 
-    app.controller("ManageController", ['$scope', '$log', '$http', function($scope, $log, $http ) {
+    app.controller("ManageController", ["$http", "$log", "$scope", function($http, $log, $scope) {
+
         $scope.posts = [];
 
         $http.get('/posts/list').then(function(response) {
-            $log.info("Post list success response");
 
-            $log.debug(response);
-        $scope.posts = response.data;
+            $scope.posts = response.data;
+
+            $log.info("Post list success response.");
+
+            $log.info(response);
+
         }, function(response) {
-            $log.error("Post list error response");
+            $log.error("Post list error response!");
 
             $log.debug(response);
         });
 
-        $scope.deletePost = function (index) {
-            var id = $scope.posts[index].id;
+        $scope.deletePost = function(id) {
 
-            $http.delete('/posts/' + id).then(function (response) {
-                $log.info("Post successfully deleted");
+            $http.delete('/posts/' + id).then(function(id, index) {
 
-                $scope.posts.splice(index, 1);
-            }, function (response) {
-                $log.error("Post failed to delete");
+                $scope.posts.splice(index +1, 1);
+
+                $log.info("Post Delete Successful");
+
+            }, function(response) {
+                $log.error("Delete Not Successful.");
 
                 $log.debug(response);
             });
         };
 
-    }]);  
+        $scope.open = function(index) {
+            $scope.post = $scope.posts[index];
+            $('#modal').modal('show');
+
+        };
+
+
+        $scope.editPost = function() {
+
+            $http.put('/posts/' + $scope.post.id, {
+                'title': $scope.post.title,
+                'body': $scope.post.body
+
+            }).then(function(response) {
+
+                $log.info("Edit from Manage Post Successful.");
+                $log.info(response);
+                $('#modal').modal('hide');
+
+            }, function(response) {
+                
+                $log.error("Edit Not Successful.");
+                $log.debug(response);
+            });
+        };
+
+
+        $scope.formatDate = function(date) {
+            var dateOut = new Date(date);
+            return dateOut;
+        };
+
+    }]);
+
 })();

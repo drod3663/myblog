@@ -56,15 +56,15 @@
         <a href="{{action('HomeController@showSimon')}}"><img src="/img/simon.png" class="img-responsive"></a>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-4 gallery">
-        <a href="https://github.com/Borq-Gaming/borq.dev"><img src="/img/borq.png" class="img-responsive"></a>
+        <a href="{{action('HomeController@showBorq')}}"><img src="/img/borq-screen.png" class="img-responsive"></a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+        <a href="{{action('HomeController@showCalculator')}}"><img src="/img/calculator.png" class="img-responsive"></a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+        <img src="/img/wip.png" class="img-responsive"></a>
       </div>
       <!-- <div class="col-lg-4 col-md-4 col-sm-4 gallery">
-        <a href="work.html"><img src="/img/portfolio/folio04.png" class="img-responsive"></a>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
-        <a href="work.html"><img src="/img/portfolio/folio05.png" class="img-responsive"></a>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
         <a href="work.html"><img src="/img/portfolio/folio06.png" class="img-responsive"></a>
       </div> -->
     </div><! --/row -->
@@ -75,7 +75,20 @@
   <div id="social">
     <div class="container">
       <div class="row centered">
-      <h1>Latest Posts</h1>
+      <h1>Latest Blog Entries</h1>
+      @foreach ($posts as $post)
+      <h2><a href="{{{ action('PostsController@show', $post->id) }}}">{{{$post->title}}}</a></h2>
+        <!-- <h3>Post Title: {{{$post->title}}}</h3> -->
+        <!-- {{{Str::words($post->body, 20)}}} -->
+        <p><em> {{"created by: " . $post->user->first_name }} {{$post->user->last_name}}</em></p>
+        <h5> {{ $post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i:s A'); }} </h5>
+        
+      
+      @endforeach
+      <!-- <div class="row centered"> -->
+      <h3 class="entries"><a href="{{action('PostsController@index')}}">See All Entries</a></h3>
+      <!-- </div> -->
+      
         <!-- <div class="col-lg-2">
           <a href="#"><i class="fa fa-dribbble"></i></a>
         </div> -->
@@ -94,7 +107,7 @@
         <div class="col-lg-4">
           <a href="https://github.com/drod3663"><i class="fa fa-github"></i></a>
         </div> -->
-        
+
 
       
       </div><! --/row -->

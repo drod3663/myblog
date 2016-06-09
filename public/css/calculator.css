@@ -1,0 +1,51 @@
+
+body {
+    
+    background-image: url('/img/wood.jpg');
+
+}
+
+section {
+    width: 400px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#container{
+    width: 400px;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.textBoxes {
+    width: 119px;
+    height: 85px;
+    border: 1px solid #fbeaff;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: #d9d9d9;
+    font-size: 36px;
+}
+
+.button {
+    width: 84px;
+    height: 85px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 6px;
+    font-size: 36px;
+    background-color: #D3D3D3;
+    outline: none;
+}
+
+/*.solarPanel {
+    float: right;
+    width: 276px;
+    height: 83px;
+    margin: 4px 6px;
+}
+img{
+    border: 1px solid #008000;
+}*/

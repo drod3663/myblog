@@ -17,7 +17,9 @@ class HomeController extends BaseController {
 
 	public function showHomepage()
 	{
-		return View::make('homepage');
+		$posts = Post::with('user')->orderBy('created_at', 'desc')->paginate(3);
+		// return View::make('homepage');
+		return View::make('homepage', compact('posts', 'pagination'));
 	}
 
 	public function showWelcome()
@@ -58,6 +60,11 @@ class HomeController extends BaseController {
 	public function showSimon()
 	{
 		return View::make('simplesimon');
+	}
+
+	public function showBorq()
+	{
+		return View::make('borq');
 	}
 
 	public function showAnimate()

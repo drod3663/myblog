@@ -11,6 +11,9 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+
+
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
@@ -40,10 +43,16 @@
 			<div class='mole second' id='8'></div>
 		</div>
 	</div>
+</div>
+</div>
 	
+	
+
 	<script>
+
 	'use strict';
 	$(document).ready(function(){
+	
 	var random
 	var intervalId
 	var score = 0
